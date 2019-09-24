@@ -24,3 +24,26 @@ $(() => {
   game_init(root);
 });
 
+// TODO --  possibly delete
+// FROM notes-05 react
+
+//import todo_init from "./todo";
+
+//window.addEventListener("load", (_ev) => {
+//	let root = document.getElementById('root');
+//	if (root) {
+//		todo_init(root);
+//	}
+//});
+
+
+// TODO -- check if all this is correct
+// Also why is elixir indenting weird?
+import game_init from "./starter-game";
+
+window.addEventListener("load", (_ev) => {
+	let root = document.getElementById('root');
+	if (root) {
+		game_init(root);
+	}
+});
