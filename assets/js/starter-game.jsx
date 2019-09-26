@@ -12,7 +12,7 @@ class Starter extends React.Component {
     this.state = { left: false };
   }
 
-  swap(_ev) {
+	swap(_ev) {
     let state1 = _.assign({}, this.state, { left: !this.state.left });
     this.setState(state1);
   }

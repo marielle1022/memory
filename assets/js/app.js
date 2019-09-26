@@ -39,8 +39,6 @@ $(() => {
 
 // TODO -- check if all this is correct
 // Also why is elixir indenting weird?
-import game_init from "./starter-game";
-
 window.addEventListener("load", (_ev) => {
 	let root = document.getElementById('root');
 	if (root) {
