@@ -11,11 +11,10 @@ class Starter extends React.Component {
     super(props);
     this.state = { left: false };
   }
-
 	swap(_ev) {
-    let state1 = _.assign({}, this.state, { left: !this.state.left });
-    this.setState(state1);
-  }
+    		let state1 = _.assign({}, this.state, { left: !this.state.left });
+    		this.setState(state1);
+  	}
 
   hax(_ev) {
     alert("hax!");
