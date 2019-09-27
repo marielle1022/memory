@@ -32,7 +32,7 @@ class Starter extends React.Component {
           randomTiles,
           value: tempValue,
         };
-      };
+      },
       tempTiles = tempTiles.filter(tempTiles[index]);
     };
   }
