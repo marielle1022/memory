@@ -50,29 +50,30 @@ class Starter extends React.Component {
 
   render() {
     return (
+      console.log(this.state.randomTiles),
       <div className="starter">
-        /* Create 4x4 row*/
+
         <div className="board-row">
           {this.renderTile(0)}
           {this.renderTile(1)}
           {this.renderTile(2)}
           {this.renderTile(3)}
         </div>
-        /* Create 4x4 row*/
+
         <div className="board-row">
           {this.renderTile(4)}
           {this.renderTile(5)}
           {this.renderTile(6)}
           {this.renderTile(7)}
         </div>
-        /* Create 4x4 row*/
+
         <div className="board-row">
           {this.renderTile(8)}
           {this.renderTile(9)}
           {this.renderTile(10)}
           {this.renderTile(11)}
         </div>
-        /* Create 4x4 row*/
+
         <div className="board-row">
           {this.renderTile(12)}
           {this.renderTile(13)}
