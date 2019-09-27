@@ -52,12 +52,10 @@ class Starter extends React.Component {
   render() {
     return (
       <div className="starter">
-      /*
-      <div className="starter">
+      /* <div className="starter">
       {
         this.state.actualTiles.map(())
-      }
-      */
+      } */
         /* Create 4x4 row*/
         <div className="status">{status}</div>
         <div className="board-row">
