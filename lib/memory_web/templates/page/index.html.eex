@@ -6,5 +6,6 @@
     <div id="root">
       React component loading...
     </div>
+    <p><a href="http://mgrathena.info">Index</a></p>
   </div>
 </div>
