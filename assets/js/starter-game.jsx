@@ -12,30 +12,30 @@ class Starter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-	    originalTiles: ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F',
-		    'G', 'G', 'H', 'H'],
-	    randomTiles: []
+      originalTiles: ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F',
+      'G', 'G', 'H', 'H'],
+      randomTiles: []
     };
   }
-	randomizeTiles(arr){
-		var tempTiles = arr.slice();
-		while (tempTiles.length > 0) {
-			var len = tempTiles.length;
-			{/* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random used to understand and implement Math.random()*/}
-			var index = Math.floor(Math.random() * len);
+  randomizeTiles(arr){
+    var tempTiles = arr.slice();
+    while (tempTiles.length > 0) {
+      var len = tempTiles.length;
+      {/* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random used to understand and implement Math.random()*/}
+      var index = Math.floor(Math.random() * len);
 			{/*https://www.robinwieruch.de/react-state-array-add-update-remove to setState and cocatenate*/}
 			var tempValue = tempTiles[index];
-			this.setState(state => {
-				const randomTiles = state.list.concat(state.value);
-				return {
-					randomTiles,
-					value: tempValue,
-				};
-		};
-				tempTiles = tempTiles.filter(tempTiles[index]);
-	};
-	}
-	renderTile(i){
+      this.setState(state => {
+        const randomTiles = state.list.concat(state.value);
+        return {
+          randomTiles,
+          value: tempValue,
+        };
+      };
+      tempTiles = tempTiles.filter(tempTiles[index]);
+    };
+  }
+  renderTile(i){
 		return <Tile />;
 	}
   render() {
