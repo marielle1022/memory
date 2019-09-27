@@ -53,7 +53,6 @@ class Starter extends React.Component {
     return (
       <div className="starter">
         /* Create 4x4 row*/
-        <div className="status">{status}</div>
         <div className="board-row">
           {this.renderTile(0)}
           {this.renderTile(1)}
@@ -61,7 +60,6 @@ class Starter extends React.Component {
           {this.renderTile(3)}
         </div>
         /* Create 4x4 row*/
-        <div className="status">{status}</div>
         <div className="board-row">
           {this.renderTile(4)}
           {this.renderTile(5)}
@@ -69,7 +67,6 @@ class Starter extends React.Component {
           {this.renderTile(7)}
         </div>
         /* Create 4x4 row*/
-        <div className="status">{status}</div>
         <div className="board-row">
           {this.renderTile(8)}
           {this.renderTile(9)}
@@ -77,7 +74,6 @@ class Starter extends React.Component {
           {this.renderTile(11)}
         </div>
         /* Create 4x4 row*/
-        <div className="status">{status}</div>
         <div className="board-row">
           {this.renderTile(12)}
           {this.renderTile(13)}
