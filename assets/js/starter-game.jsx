@@ -27,15 +27,16 @@ class Starter extends React.Component {
       /*https://www.robinwieruch.de/react-state-array-add-update-remove to setState and cocatenate*/
       let tempValue = tempTiles[index];
       this.setState(state => {
-        const randomTiles = state.list.concat(state.value)
+        const randomTiles = state.list.concat(state.value);
         return {
           randomTiles,
-          value: tempValue
-        }
-      }
+          value: tempValue,
+        };
+      });
       tempTiles = tempTiles.filter(tempTiles[index]);
     }
   }
+
   renderTile(i){
     return <Tile />;
   }
