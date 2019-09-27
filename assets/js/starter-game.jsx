@@ -22,7 +22,6 @@ class Starter extends React.Component {
   /* Create a function to handle clicking a tile.*/
   /*
   handleClick(tileValue, ){
-
   }
   */
   randomizeTiles(arr){
@@ -97,55 +96,4 @@ class Tile extends React.Component{
       </button>
     );
   }
-}
-
-// Citation: React tutorial (https://reactjs.org/tutorial/tutorial.html) for ideas on structure.
-// This class creates the board setup
-class Board extends React.Component {
-	renderTile(i) {
-		return <Tile />;
-	}
-
-	// Main render for Board class
-	render() {
-		// Hold the status of which player goes next
-		const status = 'Next player: ';
-
-		return (
-			<div>
-				<div className="status">{status}</div>
-				// Create 4x4 row
-				<div className="board-row">
-					{this.renderTile(0)}
-					{this.renderTile(1)}
-					{this.renderTile(2)}
-					{this.renderTile(3)}
-				</div>
-				<div className="status">{status}</div>
-				// Create 4x4 row
-				<div className="board-row">
-					{this.renderTile(4)}
-					{this.renderTile(5)}
-					{this.renderTile(6)}
-					{this.renderTile(7)}
-				</div>
-				<div className="status">{status}</div>
-				// Create 4x4 row
-				<div className="board-row">
-					{this.renderTile(8)}
-					{this.renderTile(9)}
-					{this.renderTile(10)}
-					{this.renderTile(11)}
-				</div>
-				<div className="status">{status}</div>
-				// Create 4x4 row
-				<div className="board-row">
-					{this.renderTile(12)}
-					{this.renderTile(13)}
-					{this.renderTile(14)}
-					{this.renderTile(15)}
-				</div>
-			</div>
-		);
-	}
 }
