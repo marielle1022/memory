@@ -33,8 +33,8 @@ class Starter extends React.Component {
           value: tempValue,
         };
       },
-      tempTiles = tempTiles.filter(tempTiles[index]),
-    };
+      tempTiles = tempTiles.filter(tempTiles[index]);
+    }
   }
   renderTile(i){
     return <Tile />;
