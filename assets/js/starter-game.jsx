@@ -21,7 +21,7 @@ class Starter extends React.Component {
   }
 
   render() {
-    let button = <div className="column" onMouseMove={this.swap.bind(this)}>
+    let button = <div className="column">
       <p><button onClick={this.hax.bind(this)}>Click Me</button></p>
     </div>;
 
@@ -44,7 +44,7 @@ class Starter extends React.Component {
   }
 }
 
-// Citation: React tutorial (https://reactjs.org/tutorial/tutorial.html)
+// Citation: React tutorial (https://reactjs.org/tutorial/tutorial.html) for ideas on structure.
 // This class represents the basic tiles on the board
 // TODO: may need to change it from a class to a function
 class Tile extends React.Component{
@@ -57,7 +57,7 @@ class Tile extends React.Component{
 	}
 }
 
-// Citation: React tutorial (https://reactjs.org/tutorial/tutorial.html)
+// Citation: React tutorial (https://reactjs.org/tutorial/tutorial.html) for ideas on structure.
 // This class creates the board setup
 class Board extends React.Component {
 	renderTile(i) {
