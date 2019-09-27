@@ -79,10 +79,10 @@ class Starter extends React.Component {
   }
 }
 
-{/*} Citation: React tutorial (https://reactjs.org/tutorial/tutorial.html)
+/*} Citation: React tutorial (https://reactjs.org/tutorial/tutorial.html)
   to learn React and for ideas on structure.
   This class represents the basic tiles on the board
-  TODO: may need to change it from a class to a function */}
+  TODO: may need to change it from a class to a function */
 class Tile extends React.Component{
   render() {
     return(
