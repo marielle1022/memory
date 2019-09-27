@@ -36,32 +36,29 @@ class Starter extends React.Component {
     };
   }
   renderTile(i){
-		return <Tile />;
-	}
-  render() {
+    return <Tile />;
+  }
 
-	return (
-		randomizeTiles(this.state.originalTiles);
-		{/* TODO: delete console log*/}
-		console.log(this.state.randomTiles);
-			<div>
-				<div className="status">{status}</div>
-		{/* Create 4x4 row*/}
-				<div className="board-row">
-					{this.renderTile(0)}
+  render() {
+    return (
+      randomizeTiles(this.state.originalTiles);
+      {/* TODO: delete console log*/}
+      console.log(this.state.randomTiles);
+      <div>
+        {/* Create 4x4 row*/}
+        <div className="board-row">
+          {this.renderTile(0)}
 					{this.renderTile(1)}
 					{this.renderTile(2)}
 					{this.renderTile(3)}
 				</div>
-				<div className="status">{status}</div>
-			{/* Create 4x4 row*/}
+        {/* Create 4x4 row*/}
 				<div className="board-row">
-					{this.renderTile(4)}
+          {this.renderTile(4)}
 					{this.renderTile(5)}
 					{this.renderTile(6)}
 					{this.renderTile(7)}
 				</div>
-				<div className="status">{status}</div>
 				{/* Create 4x4 row*/}
 				<div className="board-row">
 					{this.renderTile(8)}
@@ -69,7 +66,6 @@ class Starter extends React.Component {
 					{this.renderTile(10)}
 					{this.renderTile(11)}
 				</div>
-				<div className="status">{status}</div>
 				{/* Create 4x4 row*/}
 				<div className="board-row">
 					{this.renderTile(12)}
@@ -78,7 +74,7 @@ class Starter extends React.Component {
 					{this.renderTile(15)}
 				</div>
 			</div>
-		);
+    );
   }
 }
 
@@ -87,11 +83,11 @@ class Starter extends React.Component {
   This class represents the basic tiles on the board
   TODO: may need to change it from a class to a function */}
 class Tile extends React.Component{
-	render() {
-		return(
-		<button className="tile">
+  render() {
+    return(
+      <button className="tile">
 			{/*Need to fill in*/}
-		</button>
-		);
+      </button>
+    );
 	}
 }
