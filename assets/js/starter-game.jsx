@@ -18,21 +18,21 @@ class Starter extends React.Component {
     };
   }
   randomizeTiles(arr){
-    var tempTiles = arr.slice();
+    let tempTiles = arr.slice();
     while (tempTiles.length > 0) {
-      var len = tempTiles.length;
+      let len = tempTiles.length;
       /* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
       used to understand and implement Math.random()*/
-      var index = Math.floor(Math.random() * len);
+      let index = Math.floor(Math.random() * len);
       /*https://www.robinwieruch.de/react-state-array-add-update-remove to setState and cocatenate*/
-      var tempValue = tempTiles[index];
+      let tempValue = tempTiles[index];
       this.setState(state => {
-        const randomTiles = state.list.concat(state.value);
+        const randomTiles = state.list.concat(state.value)
         return {
           randomTiles,
-          value: tempValue,
-        };
-      },
+          value: tempValue
+        }
+      }
       tempTiles = tempTiles.filter(tempTiles[index]);
     }
   }
