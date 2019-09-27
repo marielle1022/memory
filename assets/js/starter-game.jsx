@@ -14,9 +14,17 @@ class Starter extends React.Component {
     this.state = {
       originalTiles: ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F',
       'G', 'G', 'H', 'H'],
-      randomTiles: []
+      randomTiles: [],
+      actualTiles: []
     };
+    this.randomizeTiles(this.state.originalTiles)
   }
+  /* Create a function to handle clicking a tile.*/
+  /*
+  handleClick(tileValue, ){
+
+  }
+  */
   randomizeTiles(arr){
     let tempTiles = arr.slice();
     while (tempTiles.length > 0) {
@@ -43,11 +51,15 @@ class Starter extends React.Component {
 
   render() {
     return (
-      randomizeTiles(this.state.originalTiles);
-      /* TODO: delete console log*/
-      console.log(this.state.randomTiles);
-      <div>
+      <div className="starter">
+      /*
+      <div className="starter">
+      {
+        this.state.actualTiles.map(())
+      }
+      */
         /* Create 4x4 row*/
+        <div className="status">{status}</div>
         <div className="board-row">
           {this.renderTile(0)}
           {this.renderTile(1)}
@@ -55,6 +67,7 @@ class Starter extends React.Component {
           {this.renderTile(3)}
         </div>
         /* Create 4x4 row*/
+        <div className="status">{status}</div>
         <div className="board-row">
           {this.renderTile(4)}
           {this.renderTile(5)}
@@ -62,6 +75,7 @@ class Starter extends React.Component {
           {this.renderTile(7)}
         </div>
         /* Create 4x4 row*/
+        <div className="status">{status}</div>
         <div className="board-row">
           {this.renderTile(8)}
           {this.renderTile(9)}
@@ -69,6 +83,7 @@ class Starter extends React.Component {
           {this.renderTile(11)}
         </div>
         /* Create 4x4 row*/
+        <div className="status">{status}</div>
         <div className="board-row">
           {this.renderTile(12)}
           {this.renderTile(13)}
