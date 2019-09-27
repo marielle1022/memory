@@ -6,8 +6,8 @@ export default function game_init(root) {
   ReactDOM.render(<Starter />, root);
 }
 
-// Citation: React tutorial (https://reactjs.org/tutorial/tutorial.html) 
-// to learn React and for ideas on structure.
+{/* Citation: React tutorial (https://reactjs.org/tutorial/tutorial.html)
+  to learn React and for ideas on structure.*/}
 class Starter extends React.Component {
   constructor(props) {
     super(props);
@@ -31,7 +31,6 @@ class Starter extends React.Component {
 					randomTiles,
 					value: tempValue,
 				};
-			
 		};
 				tempTiles = tempTiles.filter(tempTiles[index]);
 	};
@@ -55,7 +54,7 @@ class Starter extends React.Component {
 					{this.renderTile(3)}
 				</div>
 				<div className="status">{status}</div>
-			{/* Create 4x4 row*/}	
+			{/* Create 4x4 row*/}
 				<div className="board-row">
 					{this.renderTile(4)}
 					{this.renderTile(5)}
@@ -69,7 +68,7 @@ class Starter extends React.Component {
 					{this.renderTile(9)}
 					{this.renderTile(10)}
 					{this.renderTile(11)}
-				</div>			
+				</div>
 				<div className="status">{status}</div>
 				{/* Create 4x4 row*/}
 				<div className="board-row">
@@ -79,14 +78,14 @@ class Starter extends React.Component {
 					{this.renderTile(15)}
 				</div>
 			</div>
-		);	
+		);
   }
 }
 
-// Citation: React tutorial (https://reactjs.org/tutorial/tutorial.html) 
-// to learn React and for ideas on structure.
-// This class represents the basic tiles on the board
-// TODO: may need to change it from a class to a function
+{/*} Citation: React tutorial (https://reactjs.org/tutorial/tutorial.html)
+  to learn React and for ideas on structure.
+  This class represents the basic tiles on the board
+  TODO: may need to change it from a class to a function */}
 class Tile extends React.Component{
 	render() {
 		return(
@@ -96,4 +95,3 @@ class Tile extends React.Component{
 		);
 	}
 }
-
