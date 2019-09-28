@@ -21,7 +21,29 @@ class Starter extends React.Component {
     super(props);
     this.state = {
       randomTiles: shuffle(originalTiles),
+      score: 0
     };
+  }
+
+  revealTileValue(tile, bool){
+    if (this.state.showValue == true){
+      return tile
+    } else {
+      undefined
+    }
+  }
+
+  chooseCardTurn() {
+    if (this.state.firstCard == false) {
+      this.setState({
+        firstCard: true
+      })
+    } else if ((this.state.firstCard == true) &&
+      (this.state.secondCard == false)) {
+        this.setState({
+        secondCard: true
+      })
+    }
   }
 
   createTiles() {
@@ -45,6 +67,7 @@ class Starter extends React.Component {
         <button onClick={()=>{
           this.setState({
             randomTiles: shuffle(originalTiles)
+            score: 0
           })
         }}>Reset
         </button>
