@@ -20,9 +20,9 @@ class Starter extends React.Component {
     this.randomizeTiles(this.state.originalTiles)
   }
 
-  removeElem(arr, i) {
+  function RemoveElem(arr, i) {
     tempArr = [];
-    return tempArr.concat(arr.slice(0, i), arr.slice(i + 1));
+    return (tempArr.concat(arr.slice(0, i), arr.slice(i + 1)));
   }
 
   /* Create a function to handle clicking a tile.*/
@@ -43,7 +43,7 @@ class Starter extends React.Component {
       let tempValue = tempTiles[index];
 
       console.log(tempValue);
-      tempTiles = removeElem(tempTiles, index);
+      tempTiles = RemoveElem(tempTiles, index);
       console.log("After removal");
       console.log(tempTiles);
       /*
