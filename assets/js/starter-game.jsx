@@ -23,16 +23,30 @@ class Starter extends React.Component {
       randomTiles: shuffle(originalTiles),
     };
   }
+
+  createTiles() {
+    return this.state.randomTiles.map((tile, key) => {
+      return(
+        <button key = {key}>
+        {tile}
+        </button>
+      )
+    })
+  }
+
   render() {
     return (
+      /* See https://www.robinwieruch.de/react-function-component for how to
+      handle events */
       <div className="starter">
-        /* See https://www.robinwieruch.de/react-function-component for how to
-        handle events */
+        <div className="row board">
+          {this.createTiles()}
+        </div>
         <button onClick={()=>{
           this.setState({
             randomTiles: shuffle(originalTiles)
           })
-          >NameOfButton
+        }}>Reset
         </button>
       </div>
     );
