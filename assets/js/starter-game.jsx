@@ -38,7 +38,7 @@ class Starter extends React.Component {
       let tempValue = tempTiles[index];
 
       console.log(tempValue);
-      tempTiles = tempTiles.concat(tempTiles.slice(0, i), tempTiles.slice(i + 1))
+      tempTiles = tempTiles.concat(tempTiles.slice(0, index), tempTiles.slice(index + 1))
       console.log("After removal");
       console.log(tempTiles);
       /*
