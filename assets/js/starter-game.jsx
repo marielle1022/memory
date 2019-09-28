@@ -22,7 +22,7 @@ class Starter extends React.Component {
 
   removeElem(arr, i) {
     tempArr = [];
-    return(tempArr.concat(arr.slice(0, i), arr.slice(i + 1)));
+    return tempArr.concat(arr.slice(0, i), arr.slice(i + 1));
   }
 
   /* Create a function to handle clicking a tile.*/
