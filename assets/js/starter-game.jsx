@@ -19,6 +19,7 @@ class Starter extends React.Component {
     };
     this.randomizeTiles(this.state.originalTiles)
   }
+
   /* Create a function to handle clicking a tile.*/
   /*
   handleClick(tileValue, ){
@@ -40,11 +41,15 @@ class Starter extends React.Component {
           value: tempValue,
         };
       });
-      tempTiles = tempTiles.filter(tempTiles[index]);
+      tempTiles = tempTiles.filter(
+        tempTiles[index];
+        return {
+          tempTiles,
+        });
+      }
     }
-  }
 
-  renderTile(i){
+  renderTile(num){
     return <Tile />;
   }
 
