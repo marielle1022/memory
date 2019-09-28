@@ -27,7 +27,9 @@ class Starter extends React.Component {
   */
   randomizeTiles(arr){
     let tempTiles = arr.slice();
+    console.log("Hello");
     console.log(tempTiles);
+    console.log("goodbye");
     /*
     while (tempTiles.length > 0) {
       let len = tempTiles.length;
