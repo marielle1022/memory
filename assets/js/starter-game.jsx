@@ -27,7 +27,10 @@ class Starter extends React.Component {
   */
   randomizeTiles(arr){
     let tempTiles = arr.slice();
+    /*
     while (tempTiles.length > 0) {
+    */
+    for (let i = 0; i < 16; i++) {
       console.log("Before removal");
       console.log(tempTiles);
       let len = tempTiles.length;
