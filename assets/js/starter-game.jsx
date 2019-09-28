@@ -37,11 +37,13 @@ class Starter extends React.Component {
       /* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
       used to understand and implement Math.random() */
       let index = Math.floor(Math.random() * len);
+      let tempArr = [];
       /*https://www.robinwieruch.de/react-state-array-add-update-remove to setState and cocatenate*/
       let tempValue = tempTiles[index];
 
       console.log(tempValue);
-      tempTiles = tempTiles.concat(tempTiles.slice(0, index), tempTiles.slice(index + 1));
+      tempArr = tempTiles.concat(tempTiles.slice(0, index), tempTiles.slice(index + 1));
+      tempTiles = tempArr.slice();
       console.log("After removal");
       console.log(tempTiles);
       /*
