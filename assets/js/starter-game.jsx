@@ -20,8 +20,6 @@ class Starter extends React.Component {
     this.randomizeTiles(this.state.originalTiles)
   }
 
-  /* Citation: https://philihp.com/2018/removing-the-first-instance-of-an-element-from-a-es6-javascript-array.html
-  function was modified for this program.*/
   removeElemAtIndex(arr, i) {
     tempArr = [];
     return(tempArr.concat(arr.slice(0, i)), tempArr.concat(arr.slice(i + 1)));
@@ -45,7 +43,7 @@ class Starter extends React.Component {
       let tempValue = tempTiles[index];
 
       console.log(tempValue);
-      tempValue = removeElemAtIndex(tempTiles, index);
+      tempTiles = removeElemAtIndex(tempTiles, index);
       console.log("After removal");
       console.log(tempTiles);
       /*
