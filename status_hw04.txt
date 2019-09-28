@@ -17,7 +17,7 @@ memory1.mgrathena.info
 
 
 4. Is your game functionality complete? If not, what's missing?
-Not yet, I've focused on deployment.
+No. A lot.
 
 
 
