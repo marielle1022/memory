@@ -23,7 +23,8 @@ class Starter extends React.Component {
   /* Citation: https://philihp.com/2018/removing-the-first-instance-of-an-element-from-a-es6-javascript-array.html
   function was modified for this program.*/
   removeElemAtIndex(arr, i) {
-    return(...arr.slice(0, i), ...arr.slice(i + 1));
+    tempArr = [];
+    return(tempArr.concat(arr.slice(0, i)), tempArr.concat(arr.slice(i + 1)));
   }
 
   /* Create a function to handle clicking a tile.*/
@@ -44,7 +45,7 @@ class Starter extends React.Component {
       let tempValue = tempTiles[index];
 
       console.log(tempValue);
-      removeElemAtIndex(tempTiles, index);
+      tempValue = removeElemAtIndex(tempTiles, index);
       console.log("After removal");
       console.log(tempTiles);
       /*
