@@ -20,7 +20,7 @@ class Starter extends React.Component {
     this.randomizeTiles(this.state.originalTiles)
   }
 
-  function RemoveElem(arr, i) {
+  removeElem(arr, i) {
     tempArr = [];
     return tempArr.concat(arr.slice(0, i), arr.slice(i + 1));
   }
@@ -43,7 +43,7 @@ class Starter extends React.Component {
       let tempValue = tempTiles[index];
 
       console.log(tempValue);
-      tempTiles = RemoveElem(tempTiles, index);
+      tempTiles = removeElem(tempTiles, index);
       console.log("After removal");
       console.log(tempTiles);
       /*
