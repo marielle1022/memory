@@ -42,7 +42,7 @@ class Starter extends React.Component {
         };
       });
       tempTiles = tempTiles.filter(
-        tempTiles[index];
+        (tempTiles[index] => tempTiles[index]);
         return {
           tempTiles,
         });
