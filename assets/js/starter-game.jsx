@@ -27,6 +27,7 @@ class Starter extends React.Component {
   */
   randomizeTiles(arr){
     let tempTiles = arr.slice();
+    console.log(tempTiles);
     while (tempTiles.length > 0) {
       let len = tempTiles.length;
       /* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
@@ -41,8 +42,11 @@ class Starter extends React.Component {
           value: tempValue,
         };
       });
+      /*
       tempTiles = tempTiles.filter(
         (tempTiles[index] => tempTiles[index]));
+        */
+        
       }
     }
 
