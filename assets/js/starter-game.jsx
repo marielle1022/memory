@@ -20,6 +20,12 @@ class Starter extends React.Component {
     this.randomizeTiles(this.state.originalTiles)
   }
 
+  /* Citation: https://philihp.com/2018/removing-the-first-instance-of-an-element-from-a-es6-javascript-array.html
+  function was modified for this program.*/
+  removeElemAtIndex(arr, i) {
+    return[...arr.slice(0, i), ...arr.slice(i + 1)];
+  }
+
   /* Create a function to handle clicking a tile.*/
   /*
   handleClick(tileValue, ){
@@ -27,21 +33,21 @@ class Starter extends React.Component {
   */
   randomizeTiles(arr){
     let tempTiles = arr.slice();
-    console.log("Hello");
-    console.log(tempTiles);
-    console.log("goodbye");
-    /*
     while (tempTiles.length > 0) {
+      console.log("Before removal");
+      console.log(tempTiles);
       let len = tempTiles.length;
-      */
       /* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-      used to understand and implement Math.random()*/
-      /*
+      used to understand and implement Math.random() */
       let index = Math.floor(Math.random() * len);
-      */
       /*https://www.robinwieruch.de/react-state-array-add-update-remove to setState and cocatenate*/
-      /*
       let tempValue = tempTiles[index];
+
+      console.log(tempValue);
+      tempTiles = removeElemAtIndex(tempTiles, index);
+      console.log("After removal");
+      console.log(tempTiles);
+      /*
       this.setState(state => {
         const randomTiles = state.list.concat(state.value);
         return {
@@ -54,9 +60,8 @@ class Starter extends React.Component {
       tempTiles = tempTiles.filter(
         (tempTiles[index] => tempTiles[index]));
         */
-      /*
+
       }
-      */
     }
 
   renderTile(num){
@@ -108,7 +113,7 @@ class Tile extends React.Component{
   render() {
     return(
       <button className="tile">
-      /*Need to fill in*/
+      randomTiles val
       </button>
     );
   }
