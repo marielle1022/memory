@@ -17,6 +17,10 @@ class Starter extends React.Component {
     super(props);
     this.state = {
       randomTiles: this.shuffle(originalTiles),
+      /* When flippedTiles reaches size 2, it's time for the next turn.*/
+      /* If flippedTiles[0]==flippedTiles[1], add one point to the
+      score and remove those tiles from randomTiles.*/
+      flippedTiles: [],
       score: 0
     };
   }
@@ -48,6 +52,17 @@ class Starter extends React.Component {
   }
 
   createTiles() {
+    return this.state.randomTiles.map((tile, key) => {
+      return(
+        <button key = {key}>
+        {tile}
+        </button>
+      )
+    })
+  }
+
+  checkMatch(key1, key2) {
+    if (this.flippedTiles)
     return this.state.randomTiles.map((tile, key) => {
       return(
         <button key = {key}>
