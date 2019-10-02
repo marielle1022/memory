@@ -1,7 +1,8 @@
 #!/bin/bash
 
 export MIX_ENV=prod
-export PORT=4791
+#DONE: changed port from 4791 to 4789
+export PORT=4789
 
 echo "Starting app..."
 

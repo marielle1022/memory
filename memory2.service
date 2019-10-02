@@ -1,0 +1,19 @@
+[Unit]
+Description=Elixir Practice
+
+#DONE: changed port 4791 to 4789
+#DONE: changed user, group
+#Done: changed filepath in WorkingDirectory, ExecStart
+[Service]
+Type=simple
+User=memory2
+Group=memory2
+Restart=on-failure
+Environment=MIX_ENV=prod "PORT=4789"
+Environment=LANG=en_US.UTF-8
+
+WorkingDirectory=/home/memory2/memory
+ExecStart=/bin/bash /home/memory2/memory/start.sh
+
+[Install]
+WantedBy=multi-user.target
