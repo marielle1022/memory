@@ -24,11 +24,9 @@ import game_init from "./starter-game";
 
 // TODO: taken from hangman (channel branch) app.js
 $(() => {
-  //let root = $('#root')[0];
   let root = document.getElementById('root');
   if (root) {
-    // CHANGE: "games" to "rooms"
-    // CHANGE: changed back to try to solve join error
+    // CHANGE back to games for join error
     let channel = socket.channel("games:" + window.gameName, {});
     game_init(root, channel);
   }

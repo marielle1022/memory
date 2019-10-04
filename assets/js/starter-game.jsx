@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import _ from 'lodash';
 
 export default function game_init(root, channel) {
-  ReactDOM.render(<Starter channel={channel}/>, root);
+  ReactDOM.render(<Starter channel={channel} />, root);
 }
 // This is the Client-side state for the memory game.
 
@@ -12,12 +12,10 @@ export default function game_init(root, channel) {
 class Starter extends React.Component {
   constructor(props) {
     super(props);
+
     this.channel = props.channel;
     this.state = {
-      /* When flippedTiles reaches size 2, it's time for the next turn.*/
-      /* If flippedTiles[0]==flippedTiles[1], add one point to the
-      score and remove those tiles from randomTiles.*/
-      flippedTiles: [],
+      shuffledTiles: [],
       score: 0
     };
     /* Citation: NatTuck hangman-2019-01/assets/js/hangman.jsx (channel-hangman
@@ -31,6 +29,7 @@ class Starter extends React.Component {
   /* Citation: NatTuck hangman-2019-01/assets/js/hangman.jsx (channel-hangman
       branch) */
   got_view(view) {
+    // TODO: Need to take this out to keep array hidden
     console.log("new view", view);
     this.setState(view.game);
   }
@@ -70,29 +69,25 @@ class Starter extends React.Component {
 
   */
 
-  createTiles() {
-    return this.state.randomTiles.map((tile, key) => {
-      return(
-        <button key = {key}>
-        {tile}
-        </button>
-      )
-    })
-  }
+  // createTiles() {
+  //   return this.state.randomTiles.map((tile, key) => {
+  //     return(
+  //       <button key = {key}>
+  //       {tile}
+  //       </button>
+  //     )
+  //   })
+  // }
 
   render() {
     return (
       /* See https://www.robinwieruch.de/react-function-component for how to
       handle events */
-      <div className="starter">
-        <div className="row board">
-          {this.createTiles()}
-        </div>
-        <button onClick={()=>{
-          this.setState({
-            score: 0
-          })
-        }}>Reset
+      <div>
+        //<div className="row board">
+          //{this.createTiles()}
+        //</div>
+        <button>Reset
         </button>
       </div>
     );

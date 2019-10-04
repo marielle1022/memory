@@ -2,9 +2,8 @@ defmodule MemoryWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # CHANGE: uncommented below, changed to "rooms" to match app.js
-  #channel "rooms:*", MemoryWeb.RoomsChannel
   # CHANGE: changed back to games to try to fix error with joining multiple times
+
   channel "games:*", MemoryWeb.GamesChannel
 
   # Socket params are passed from the client and can
@@ -33,5 +32,6 @@ defmodule MemoryWeb.UserSocket do
   #     MemoryWeb.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
   #
   # Returning `nil` makes this socket anonymous.
+
   def id(_socket), do: nil
 end

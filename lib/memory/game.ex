@@ -7,9 +7,10 @@ defmodule Memory.Game do
   # branch) -- used to inform existence of new and client_view
 
   # This should be hidden from the client
+
   def new do
     originalTiles = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F',
-    'G', 'G', 'H', 'H'];
+    'G', 'G', 'H', 'H']
     # Independently figured out everything but the Enum.map(fn ...) portion using hexdocs for
     # Map, List, and Enum.
     # Ended up using answer from Andrei Skorokhod (link below) to implement Enum.map(fn ...) and
@@ -22,17 +23,24 @@ defmodule Memory.Game do
     # alphabetical/numerical order, and including Enum.shuffle() at the end will convert
     # the map back into a list.
     %{
-      shuffledTiles: originalTiles
-        |> Enum.shuffle()
-        |> Enum.with_index()
-        |> Enum.map(fn {value, key} -> {key, value} end)
-        |> Map.new(),
+      shuffledTiles: [],
+      score: 0,
+      #shuffledTiles: originalTiles
+        #|> Enum.shuffle()
+        #|> Enum.with_index()
+        #|> Enum.map(fn {value, key} -> {key, value} end)
+        #|> Map.new(),
     }
   end
 
   def client_view(game) do
+    #%{
+    #shuffledTiles: game.shuffledTiles,
+    #score: game.score
+    #}
     %{
-    shuffledTiles: game.shuffledTiles
+    shuffledTiles: [],
+    score: 0,
     }
   end
 

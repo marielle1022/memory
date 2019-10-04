@@ -14,7 +14,7 @@ defmodule MemoryWeb.GamesChannel do
       |> assign(:game, game)
       |> assign(:name, name)
       IO.inspect(socket)
-      {:ok, %{"join" => name, "game" => game}, socket}
+      {:ok, %{"join" => name, "game" => Game.client_view(game)}, socket}
     else
       {:error, %{reason: "unauthorized"}}
     end
