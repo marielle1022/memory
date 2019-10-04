@@ -5,10 +5,7 @@ import _ from 'lodash';
 export default function game_init(root, channel) {
   ReactDOM.render(<Starter channel={channel}/>, root);
 }
-
-/* Move inside constructor if possible */
-const originalTiles = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F',
-'G', 'G', 'H', 'H'];
+// This is the Client-side state for the memory game.
 
 /* See React tutorial (https://reactjs.org/tutorial/tutorial.html)
   to learn React and for ideas on structure.*/
@@ -17,7 +14,6 @@ class Starter extends React.Component {
     super(props);
     this.channel = props.channel;
     this.state = {
-      randomTiles: this.shuffle(originalTiles),
       /* When flippedTiles reaches size 2, it's time for the next turn.*/
       /* If flippedTiles[0]==flippedTiles[1], add one point to the
       score and remove those tiles from randomTiles.*/
@@ -26,19 +22,20 @@ class Starter extends React.Component {
     };
     /* Citation: NatTuck hangman-2019-01/assets/js/hangman.jsx (channel-hangman
         branch) */
-        /*
     this.channel
       .join()
       .receive("ok", this.got_view.bind(this))
       .receive("error", resp => { console.log("Unable to join", resp); });
-      */
   }
 
-  // Citation: https://javascript.info/task/shuffle
-  shuffle(array) {
-    return array.sort(() => Math.random() - 0.5);
-  }
+  /* Citation: NatTuck hangman-2019-01/assets/js/hangman.jsx (channel-hangman
+      branch) */
+  got_view(view) {
+  console.log("new view", view);
+  this.setState(view.game);
+}
 
+  /*
   revealTileValue(tile, bool){
     if (this.state.showValue == true){
       return tile
@@ -60,7 +57,8 @@ class Starter extends React.Component {
     }
   }
 
-  createTiles() {
+  checkMatch(key1, key2) {
+    if (this.flippedTiles)
     return this.state.randomTiles.map((tile, key) => {
       return(
         <button key = {key}>
@@ -70,8 +68,9 @@ class Starter extends React.Component {
     })
   }
 
-  checkMatch(key1, key2) {
-    if (this.flippedTiles)
+  */
+
+  createTiles() {
     return this.state.randomTiles.map((tile, key) => {
       return(
         <button key = {key}>
