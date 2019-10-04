@@ -3,7 +3,9 @@ defmodule MemoryWeb.UserSocket do
 
   ## Channels
   # CHANGE: uncommented below, changed to "rooms" to match app.js
-  channel "rooms:*", MemoryWeb.RoomsChannel
+  #channel "rooms:*", MemoryWeb.RoomsChannel
+  # CHANGE: changed back to games to try to fix error with joining multiple times
+  channel "games:*", MemoryWeb.GamesChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After

@@ -1,4 +1,4 @@
-defmodule MemoryWeb.RoomsChannel do
+defmodule MemoryWeb.GamesChannel do
   # CHANGE: not using Phoenix.Socket, using MemoryWeb
   use MemoryWeb, :channel
 
@@ -6,13 +6,13 @@ defmodule MemoryWeb.RoomsChannel do
 
   alias Memory.Game
 
-  def join("rooms:" <> name, payload, socket) do
+  def join("games:" <> name, payload, socket) do
     if authorized?(payload) do
-      room = Game.new()
+      game = Game.new()
       socket = socket
-      |> assign(:room, room)
+      |> assign(:game, game)
       |> assign(:name, name)
-      {:ok, %{"join" => name, "room" => Game.client_view(room)}, socket}
+      {:ok, %{"join" => name, "game" => Game.client_view(game)}, socket}
     else
       {:error, %{reason: "unauthorized"}}
     end
