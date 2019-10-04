@@ -19,7 +19,9 @@ defmodule MemoryWeb.Router do
     get "/", PageController, :index
     # CHANGE: added line below
     # Modeled after previous assignment (elixir_practice)
+    # route = macro(get/post/etc.), path, controller, action to handle request
     post "/name", PageController, :game
+    #post "/actual_game.html", PageController, :name
   end
 
   # Other scopes may use custom stacks.
