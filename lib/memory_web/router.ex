@@ -18,8 +18,8 @@ defmodule MemoryWeb.Router do
 
     get "/", PageController, :index
     # CHANGE: added line below
-    # NatTuck hangman-2019-01 01-31-channel-hangman branch
-    get "/game/:name", PageController, :game
+    # Modeled after previous assignment (elixir_practice)
+    post "/name", PageController, :game
   end
 
   # Other scopes may use custom stacks.

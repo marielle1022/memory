@@ -2,7 +2,8 @@ defmodule MemoryWeb.PageController do
   use MemoryWeb, :controller
 
   # CHANGE: added "game" function
-  # Citation: modeled from NatTuck hangman-2019-01 01-31-channel-hangman branch
+
+  # Modeled after previous assignment (elixir_practice)
   def game(conn, %{"name" => name}) do
     render conn, "actual_game.html", name: name
   end
