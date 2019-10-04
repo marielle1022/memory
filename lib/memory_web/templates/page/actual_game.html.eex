@@ -1,0 +1,17 @@
+<!--- TODO: check this -->
+<!--- CHANGE: added script, @name--->
+<!--- Citation: NatTuck hangman-2019-01 01-31-channel-hangman branch -->
+
+<script>
+  window.gameName = "<%= @name %>";
+</script>
+
+<div class="row">
+  <div class="column">
+    <h1>Memory Game: <%= @name %> (hopefully) on the way...</h1>
+    <div id="root">
+      React component loading...
+    </div>
+    <p><a href="http://mgrathena.info">Index</a></p>
+  </div>
+</div>

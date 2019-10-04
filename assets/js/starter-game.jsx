@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 
-export default function game_init(root) {
-  ReactDOM.render(<Starter />, root);
+export default function game_init(root, channel) {
+  ReactDOM.render(<Starter channel={channel}/>, root);
 }
 
 /* Move inside constructor if possible */
@@ -15,6 +15,7 @@ const originalTiles = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F
 class Starter extends React.Component {
   constructor(props) {
     super(props);
+    this.channel = props.channel;
     this.state = {
       randomTiles: this.shuffle(originalTiles),
       /* When flippedTiles reaches size 2, it's time for the next turn.*/
@@ -23,6 +24,14 @@ class Starter extends React.Component {
       flippedTiles: [],
       score: 0
     };
+    /* Citation: NatTuck hangman-2019-01/assets/js/hangman.jsx (channel-hangman
+        branch) */
+        /*
+    this.channel
+      .join()
+      .receive("ok", this.got_view.bind(this))
+      .receive("error", resp => { console.log("Unable to join", resp); });
+      */
   }
 
   // Citation: https://javascript.info/task/shuffle

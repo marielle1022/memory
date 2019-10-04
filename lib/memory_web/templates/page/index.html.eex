@@ -1,11 +1,20 @@
 <!--- TODO: check this -->
+<!--- CHANGE: added href=/game/demo, removed react loading--->
 <!--- Citation: Nat's Notes - 05-react/notes.html -->
 <div class="row">
   <div class="column">
-    <h1>Memory Game (hopefully) on the way...</h1>
-    <div id="root">
-      React component loading...
-    </div>
+    <h1>Memory Game</h1>
+    <h3>Start a game</h3>
+    <!--- TODO: see if you can do with forms --->
+    <input type="text" name="roomName" required><br>
+    <form id="roomName">
+      Choose a game name:
+      <input type="text" name="roomName" required><br>
+      <input type="submit" value="Submit"><br>
+    </form>
+    <a href="/game/demo">Join "demo"</a>
+    <!--- Citation: NatTuck hangman-2019-01 01-31-channel-hangman branch -->
+    <p><a href="/game/demo">Join "demo"</a></p>
     <p><a href="http://mgrathena.info">Index</a></p>
   </div>
 </div>

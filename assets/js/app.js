@@ -17,25 +17,26 @@ import $ from "jquery";
 // Local files can be imported directly using relative paths, for example:
 // import socket from "./socket"
 
+import socket from "./socket";
 import game_init from "./starter-game";
 
+
+
+// TODO: taken from hangman (channel branch) app.js
 $(() => {
   let root = $('#root')[0];
-  game_init(root);
+  if (root) {
+    // CHANGE: "games" to "rooms"
+    let channel = socket.channel("rooms:" + window.gameName, {});
+    game_init(root, channel);
+  }
 });
 
-// TODO --  possibly delete
-// FROM notes-05 react
-
-//import todo_init from "./todo";
-
-//window.addEventListener("load", (_ev) => {
-//	let root = document.getElementById('root');
-//	if (root) {
-//		todo_init(root);
-//	}
+// TODO: this is previous version of above function(?), check if needed.
+//$(() => {
+//  let root = $('#root')[0];
+//  game_init(root);
 //});
-
 
 // TODO -- check if all this is correct
 // Also why is elixir indenting weird?

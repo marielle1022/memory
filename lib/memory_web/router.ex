@@ -17,6 +17,9 @@ defmodule MemoryWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    # CHANGE: added line below
+    # NatTuck hangman-2019-01 01-31-channel-hangman branch
+    get "/game/:name", PageController, :game
   end
 
   # Other scopes may use custom stacks.
