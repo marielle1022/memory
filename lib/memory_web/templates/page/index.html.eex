@@ -1,11 +1,10 @@
 <!--- TODO: check this -->
-<!--- CHANGE: added href=/game/demo, removed react loading-->
-<!--- Citation: Nat's Notes - 05-react/notes.html -->
+<!--- CHANGE: modeled after elixir_practice --->
 <div class="row">
   <div class="column">
     <h1>Memory Game</h1>
     <h3>Start a game</h3>
-    <!--- Modeled after previous assignment (elixir_practice) -->
+    <!--- Modeled after previous assignment (elixir_practice) --->
     <%= form_for @conn, "/name", fn f-> %>
       <p>Choose a game name: <%= text_input f, :name %></p>
       <p><%= submit "Submit" %></p>
