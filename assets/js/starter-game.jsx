@@ -31,9 +31,9 @@ class Starter extends React.Component {
   /* Citation: NatTuck hangman-2019-01/assets/js/hangman.jsx (channel-hangman
       branch) */
   got_view(view) {
-  console.log("new view", view);
-  this.setState(view.game);
-}
+    console.log("new view", view);
+    this.setState(view.game);
+  }
 
   /*
   revealTileValue(tile, bool){
@@ -90,7 +90,6 @@ class Starter extends React.Component {
         </div>
         <button onClick={()=>{
           this.setState({
-            randomTiles: this.shuffle(originalTiles),
             score: 0
           })
         }}>Reset

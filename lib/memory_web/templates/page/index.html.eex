@@ -10,11 +10,6 @@
       <p><%= submit "Submit" %></p>
     <% end %>
 
-
-
-
-    <!--- Citation: NatTuck hangman-2019-01 01-31-channel-hangman branch -->
-    <!--- <p><a href="/game/demo">Join "demo"</a></p> -->
     <p><a href="http://mgrathena.info">Index</a></p>
   </div>
 </div>

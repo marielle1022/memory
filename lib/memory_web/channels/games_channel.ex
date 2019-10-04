@@ -9,10 +9,12 @@ defmodule MemoryWeb.GamesChannel do
   def join("games:" <> name, payload, socket) do
     if authorized?(payload) do
       game = Game.new()
+      IO.inspect(game)
       socket = socket
       |> assign(:game, game)
       |> assign(:name, name)
-      {:ok, %{"join" => name, "game" => Game.client_view(game)}, socket}
+      IO.inspect(socket)
+      {:ok, %{"join" => name, "game" => game}, socket}
     else
       {:error, %{reason: "unauthorized"}}
     end
