@@ -41,9 +41,10 @@ $(() => {
 // TODO -- check if all this is correct
 // Also why is elixir indenting weird?
 // CHANGED: added "channel" as param to game_init
-window.addEventListener("load", (_ev) => {
-	let root = document.getElementById('root');
-	if (root) {
-		game_init(root, channel);
-	}
-});
+// CHANGED: commented out -- needed or not?
+//window.addEventListener("load", (_ev) => {
+//	let root = document.getElementById('root');
+//	if (root) {
+//		game_init(root, channel);
+//	}
+//});
