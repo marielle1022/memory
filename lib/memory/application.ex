@@ -9,9 +9,10 @@ defmodule Memory.Application do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      MemoryWeb.Endpoint
+      MemoryWeb.Endpoint,
       # Starts a worker by calling: Memory.Worker.start_link(arg)
       # {Memory.Worker, arg},
+      Memory.BackupAgent,
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
