@@ -21,6 +21,13 @@ seen, I'm leaving in the IO.inspect(socket) statement in the games_channel.ex
 file so that you can see that the tiles are properly shuffled, and do remain
 linked to the same game name (I was able to view this running mix phx.server).
 
+Please note that the console output "onlyForGrading" is just included to show
+that game.ex does shuffle the tiles properly and that the same state is retained
+if the same game name is put in during 2 different sessions. If the game were
+working properly, this would not be included as to avoid cheating. Also, I don't
+know why the letters were changed to Unicode/ASCII values but did not have time
+to fix it.
+
 I'm struggling a lot with figuring out how to get the elixir and react
 components to communicate -- conceptually, it's really tough for me to grasp.
 At this point, I would be happy to get the tiles to appear.

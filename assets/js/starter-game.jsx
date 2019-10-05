@@ -16,8 +16,10 @@ class Starter extends React.Component {
     this.channel = props.channel;
     this.state = {
       shuffledTiles: [],
-      clickedTiles: [],
       skelTiles: [],
+      clickedTiles: [],
+      matches: [],
+      onlyForGrading: [],
       score: 0,
     }
 
@@ -47,7 +49,7 @@ class Starter extends React.Component {
   }
 }
 
-// Idea: using NatTuck hangman-2019-01/assets/js/hangman.jsx
+// Idea for tiles: using NatTuck hangman-2019-01/assets/js/hangman.jsx
 // (channel-hangman branch)
 //   render() {
 //     return (
@@ -70,7 +72,7 @@ class Starter extends React.Component {
 //   );
 // }
 
-// Another idea
+// Another idea for reset
 // render() {
 //   return (
 //     <div className="starter">
