@@ -9,7 +9,6 @@ defmodule MemoryWeb.GamesChannel do
   def join("games:" <> name, payload, socket) do
     if authorized?(payload) do
       game = Game.new()
-      IO.inspect(game.shuffledTiles)
       socket = socket
       |> assign(:game, game)
       |> assign(:name, name)

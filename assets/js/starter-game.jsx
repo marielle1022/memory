@@ -16,6 +16,8 @@ class Starter extends React.Component {
     this.channel = props.channel;
     this.state = {
       shuffledTiles: [],
+      clickedTiles: [],
+      skelTiles: [],
       score: 0,
     }
 
@@ -37,9 +39,35 @@ class Starter extends React.Component {
 
   render() {
     return (
-      <div>
-        <button>Reset</button>
+      <div className="starter">
+        <button onClick={()=>{
+          this.channel.push(this.Game.new())
+          .receive("ok", this.got_view.bind(this));
+        }}>Reset</button>
       </div>
     );
   }
 }
+
+// Idea: using NatTuck hangman-2019-01/assets/js/hangman.jsx
+// (channel-hangman branch)
+//   render() {
+//     return (
+//       <div className="starter">
+//         <div className="row board">
+//           <Tile skeleton={this.state.skelTiles} />
+//         </div>
+//         <button>Reset</button>
+//       </div>
+//     );
+//   }
+// }
+//
+// function Tile(params) {
+//   let {skeleton} = params;
+//   return (
+//     <div>
+//       <p>{skeleton.join(" ")}</p>
+//     </div>
+//   );
+// }

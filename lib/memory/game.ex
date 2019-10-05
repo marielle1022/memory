@@ -29,20 +29,36 @@ defmodule Memory.Game do
     originalTiles = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F',
     'G', 'G', 'H', 'H']
     %{
-    shuffledTiles: originalTiles
-        |> Enum.shuffle()
-        |> Enum.with_index()
-        |> Enum.map(fn {value, key} -> {key, value} end)
-        |> Map.new(),
-    score: 0
+      shuffledTiles: originalTiles
+          |> Enum.shuffle()
+          |> Enum.with_index()
+          |> Enum.map(fn {value, key} -> {key, value} end)
+          |> Map.new(),
+      clickedTiles: [],
+      score: 0
     }
   end
 
-
+  # Citation: NatTuck hangman-2019-01/assets/js/hangman.jsx
+  # (channel-hangman branch) modified
   def client_view(game) do
+    board = game.shuffledTiles
+    selected = game.clickedTiles
     %{
-    score: 0
+      skelTiles: createSkeleton(board, selected),
+      score: 0
     }
   end
 
+  # Citation: NatTuck hangman-2019-01/assets/js/hangman.jsx
+  # (channel-hangman branch) modified
+  def createSkeleton(tiles, chosen) do
+    Enum.map tiles, fn find ->
+      if Enum.member?(chosen, find) do
+        find
+      else
+        ""
+      end
+    end
+  end
 end
