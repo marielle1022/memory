@@ -10,15 +10,25 @@ Marielle Riveros
 https://github.com/marielle1022/memory
 
 
-
 3. What's the URL that you deployed to?
 memory2.mgrathena.info
 
 
 4. Is your game functionality complete, with the appropriate logic implemented
 as server-side elixir code? If not, what's missing?
-The server-side functionality is not complete yet.
-In terms of the game itself, I'm struggling to get the tiles to flip.
+The server-side functionality is not complete yet. Since the tiles cannot be
+seen, I'm leaving in the IO.inspect(socket) statement in the games_channel.ex
+file so that you can see that the tiles are properly shuffled, and do remain
+linked to the same game name (I was able to view this running mix phx.server).
+
+I'm struggling a lot with figuring out how to get the elixir and react
+components to communicate -- conceptually, it's really tough for me to grasp.
+At this point, I would be happy to get the tiles to appear.
+
+I struggled for a long time with the error "join called too many times" and am
+still unsure as to the exact cause -- the closest I can figure out is that it
+might be related to comments within the render method, which I know doesn't
+make much sense (Sangeetha, thank you for spending so much time helping me!),
 
 
 
@@ -38,5 +48,3 @@ And here's a list of tasks for grading comments. Just leave this here:
  - AA
  - BB
  - CC
-
-

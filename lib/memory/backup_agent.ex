@@ -19,6 +19,11 @@ defmodule Memory.BackupAgent do
     end
   end
 
+  # TODO: tried to add in timestamp (http://fmcgeough.github.io/elixir-agent/)
+  # in Map.get(state, name, %{time_updated: :calendar.local_time()}), but
+  # raised key error with shuffledTiles. Need to figure out why this happened
+  # and how to avoid it.
+  # TODO: figure out how to use timestamp to cause expiration.
   def get(name) do
     Agent.get __MODULE__, fn state ->
       Map.get(state, name)
