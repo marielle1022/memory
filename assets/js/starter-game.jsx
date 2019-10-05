@@ -36,14 +36,12 @@ class Starter extends React.Component {
     this.setState(view.game);
   }
 
-
+  // Need to figure out how to create new game (and render tiles)
+  // Very confused on how to get .ex and .jsx to communicate properly
   render() {
     return (
       <div className="starter">
-        <button onClick={()=>{
-          this.channel.push(this.Game.new())
-          .receive("ok", this.got_view.bind(this));
-        }}>Reset</button>
+        <button>Reset</button>
       </div>
     );
   }
@@ -68,6 +66,18 @@ class Starter extends React.Component {
 //   return (
 //     <div>
 //       <p>{skeleton.join(" ")}</p>
+//     </div>
+//   );
+// }
+
+// Another idea
+// render() {
+//   return (
+//     <div className="starter">
+//       <button onClick={()=>{
+//         this.channel.push(this.Game.new())
+//         .receive("ok", this.got_view.bind(this));
+//       }}>Reset</button>
 //     </div>
 //   );
 // }
